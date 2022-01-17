@@ -20,12 +20,12 @@
             </button>
             <div class="container2">
                 <ul>
-                    <li v-for="(elemento, indice) in toDo" :class="fatto(indice)" @click="sbarra(indice)" class="list">
-                        <div>
+                    <li v-for="(elemento, indice) in toDo" :class="fatto(indice)" class="list">
+                        <div @click="sbarra(indice)">
                             {{elemento.text}} 
                         </div>
-                        <div>
-                            <i class="fas fa-times" @click="toDo.splice(indice, 1)"></i>
+                        <div @click="hidden = true" v-on:click="toDo.splice(index, 1)">
+                            <i class="fas fa-times" ></i>
                         </div>
                     </li>
                 </ul>

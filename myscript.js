@@ -2,6 +2,7 @@ let app = new Vue({
     el: '#app',
     data:{
         array:"",
+        hidden: false,
         toDo:[
             {
                 text: 'sbarrato',
@@ -37,6 +38,6 @@ let app = new Vue({
             }else{
                 return this.toDo[indice].done = true
             }
-        }
+        },
     },
 })
