@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Vue To do list</title>
 </head>
 <body>
     <main>
-        <div id="app">
-            <input type="text">
+        <div class="title">
+            <h1>To do list</h1>
+        </div>
+        <div id="app" class="container">
+            <input type="text" v-model="array" @keyup.enter="aggiungi()">
+            <button class="btn" @click="aggiungi()">
+                add
+            </button>
+            <div class="container2">
+                <ul>
+                    <li v-for="(elemento, indice) in toDo" :class="fatto(indice)" class="list">
+                        {{elemento.text}} 
+                        <div>
+                            <i class="fas fa-times" @click="toDo.splice(indice, 1)"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
 
@@ -20,3 +37,5 @@
 <script src="myscript.js"></script>
 </body>
 </html>
+
+

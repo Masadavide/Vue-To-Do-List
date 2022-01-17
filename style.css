@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+    height: 500px;
+    width: 100vw;
+    position: relative;
+}
+
+input{
+    margin: 20px;
+}
+
+.container2{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.list{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.fas{
+    text-align: right;
+    text-decoration: none;
+}
+
+.sbarrato{
+    text-decoration-line: line-through;
+}
+
+.btn{
+    display: inline;
+}
