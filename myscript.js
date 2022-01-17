@@ -12,8 +12,8 @@ let app = new Vue({
                 done: false,
             },
             {
-                text: '3',
-                done: true,
+                text: 'Pelare patate',
+                done: false,
             }
         ]
     },
@@ -30,6 +30,13 @@ let app = new Vue({
                 done: false,
             })
             this.array=""
+        },
+        sbarra: function(indice){
+            if(this.toDo[indice].done == true){
+                return this.toDo[indice].done = false
+            }else{
+                return this.toDo[indice].done = true
+            }
         }
     },
 })
