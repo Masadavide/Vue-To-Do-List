@@ -24,7 +24,7 @@
                         <div @click="sbarra(indice)">
                             {{elemento.text}} 
                         </div>
-                        <div @click="hidden = true" v-on:click="toDo.splice(index, 1)">
+                        <div @click="rimuovi(indice)">
                             <i class="fas fa-times" ></i>
                         </div>
                     </li>

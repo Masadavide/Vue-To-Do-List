@@ -32,12 +32,16 @@ let app = new Vue({
             })
             this.array=""
         },
+        rimuovi: function(indice){
+            this.toDo.splice(indice, 1)
+        },
         sbarra: function(indice){
-            if(this.toDo[indice].done == true){
+            this.toDo[indice].done = !this.toDo[indice].done;
+            /*  if(this.toDo[indice].done == true){
                 return this.toDo[indice].done = false
             }else{
                 return this.toDo[indice].done = true
-            }
+            } */
         },
     },
 })
